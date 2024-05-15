@@ -1,18 +1,18 @@
 package org.northcoders;
 
-import org.northcoders.food.Food;
-import org.northcoders.food.NutritionalCalculator;
-import org.northcoders.food.Vitamins;
-
-import java.util.ArrayList;
-import java.util.List;
+import org.northcoders.config.ConfigManager;
+import org.northcoders.database.ImaginaryDatabase;
+import org.northcoders.transport.*;
 
 public class Main {
     public static void main(String[] args) {
 
+        var config = new ConfigManager("https://example.com/db/url", 1000, 2000);
+
         // PART ONE
         Person person = new Person("Juniper", "Doolittle", 30, "12 High Street", "01234-567890", "juniper@example.com");
         System.out.println(person);
+        config.incrementDataCount(); // ignore this for now
 
         // PART TWO
 //        ArrayList<Food> foods = new ArrayList<>(List.of(
@@ -31,8 +31,17 @@ public class Main {
 //            System.out.println("Protein in " + food.getName() +": " + protein + " grams");
 //            System.out.println("Vitamins in " + food.getName() + ": Vitamin A=" + vitamins.getVitaminA());
 //        }
+            config.incrementDataCount(); // ignore this for now
 
+        // PART THREE
 
+        // ImaginaryDatabase.flushDataQueue();
+
+        // PART FOUR
+//        Transport basicTransport = new BasicTransport("Basic");
+//        basicTransport.display();
+
+        
 
     }
 }
