@@ -1,7 +1,7 @@
 package org.northcoders.food;
 
 public interface NutritionalCalculator {
-        double calculateProtein();
-        Vitamins calculateVitamins();
+        double calculateProtein(double calories);
+        Vitamins calculateVitamins(double calories);
     }
 
