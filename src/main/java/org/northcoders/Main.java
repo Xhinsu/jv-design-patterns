@@ -15,6 +15,8 @@ public class Main {
     public static void main(String[] args) {
 
         var config = ConfigManager.getInstance();
+        var config1 = ConfigManager.getInstance();
+        config1.incrementDataCount();
 
 
         // PART ONE

@@ -7,17 +7,19 @@ public class ConfigManager {
 
         private static ConfigManager instance;
 
-        private static int dataCounter = 0;
+        private int dataCounter = 0;
 
-        private ConfigManager() {
-            this.databaseUrl = "https://example.com/db/url";
-            this.connectionTimeout = 2000;
-            this.requestTimeout = 1000;
+        private ConfigManager(){}
+
+        private ConfigManager(String databaseUrl, int connectionTimeout, int requestTimeout) {
+            this.databaseUrl = databaseUrl;
+            this.connectionTimeout = connectionTimeout;
+            this.requestTimeout = requestTimeout;
         }
 
     public static ConfigManager getInstance() {
         if (instance == null) {
-            return new ConfigManager();
+            instance = new ConfigManager();
         }
 
             return instance;
@@ -26,6 +28,7 @@ public class ConfigManager {
     public String getDatabaseUrl() {
             return databaseUrl;
         }
+
 
         public void setDatabaseUrl(String databaseUrl) {
             this.databaseUrl = databaseUrl;
