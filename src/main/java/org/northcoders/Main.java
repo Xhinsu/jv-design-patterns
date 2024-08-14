@@ -49,7 +49,7 @@ public class Main {
 //            System.out.println("Protein in " + food.getName() +": " + protein + " grams");
 //            System.out.println("Vitamins in " + food.getName() + ": Vitamin A=" + vitamins.getVitaminA());
 //        }
-//            config.incrementDataCount(); // ignore this for now
+            config.incrementDataCount(); // ignore this for now
 //
 //         // PART THREE
 
