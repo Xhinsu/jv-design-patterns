@@ -14,8 +14,6 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
 
-        var config = new ConfigManager("https://example.com/db/url", 1000, 2000);
-
         // PART ONE
         // Person person = new Person("Juniper", "Doolittle", 30, "12 High Street", "01234-567890", "juniper@example.com");
 
@@ -27,7 +25,7 @@ public class Main {
 //
 //        System.out.println(person);
 //
-//        config.incrementDataCount(); // ignore this for now
+        config.incrementDataCount(); // ignore this for now
 
         // PART TWO
         ArrayList<Food> foods = new ArrayList<>(List.of(
@@ -50,9 +48,9 @@ public class Main {
         }
             config.incrementDataCount(); // ignore this for now
 
-        // PART THREE
+         // PART THREE
 
-        // ImaginaryDatabase.flushDataQueue();
+         ImaginaryDatabase.flushDataQueue();
 
         // PART FOUR
 //        Transport basicTransport = new BasicTransport("Basic");

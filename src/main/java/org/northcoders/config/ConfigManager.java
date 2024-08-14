@@ -5,15 +5,25 @@ public class ConfigManager {
         private int connectionTimeout;
         private int requestTimeout;
 
+        private static ConfigManager instance;
+
         private int dataCounter = 0;
 
-        public ConfigManager(String databaseUrl, int connectionTimeout, int requestTimeout) {
+        private ConfigManager(String databaseUrl, int connectionTimeout, int requestTimeout) {
             this.databaseUrl = databaseUrl;
             this.connectionTimeout = connectionTimeout;
             this.requestTimeout = requestTimeout;
         }
 
-        public String getDatabaseUrl() {
+    public static ConfigManager getInstance() {
+        if (instance == null) {
+            return new ConfigManager(this.databaseUrl, this.connectionTimeout, this.requestTimeout);
+        }
+
+            return instance;
+    }
+
+    public String getDatabaseUrl() {
             return databaseUrl;
         }
 
