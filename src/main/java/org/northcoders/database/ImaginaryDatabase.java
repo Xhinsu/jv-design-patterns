@@ -11,7 +11,7 @@ public class ImaginaryDatabase {
 
     public static void flushDataQueue(){
         // let's see if there's any data waiting to be saved
-        var config = new ConfigManager("https://example.com/db/url", 1000, 2000);
+        var config = ConfigManager.getInstance();
 
 
         if(config.getDataCounter() > 0){
