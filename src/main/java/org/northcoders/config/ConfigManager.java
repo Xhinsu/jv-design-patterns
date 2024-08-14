@@ -1,5 +1,7 @@
 package org.northcoders.config;
-
+// private constructor to stop making new instance
+//static method to get the only instance
+//private static variable of the same class that is the only instance of the class
 public class ConfigManager {
         private String databaseUrl;
         private int connectionTimeout;
