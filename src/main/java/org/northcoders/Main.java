@@ -10,8 +10,16 @@ public class Main {
         var config = new ConfigManager("https://example.com/db/url", 1000, 2000);
 
         // PART ONE
-        Person person = new Person("Juniper", "Doolittle", 30, "12 High Street", "01234-567890", "juniper@example.com");
+        // Person person = new Person("Juniper", "Doolittle", 30, "12 High Street", "01234-567890", "juniper@example.com");
+
+        Person person = new Person.PersonBuilder("Kenny", "Smith", 27)
+                .email("email@email.com")
+                .addressMethod("ADDRESS")
+                .phoneNumber("0770777077077")
+                .build();
+
         System.out.println(person);
+
         config.incrementDataCount(); // ignore this for now
 
         // PART TWO
